@@ -10,6 +10,9 @@ int main() {
     char cidade1[50];
     int populacao1, pontos1;
     float area1, pib1;
+    float densidade1;
+    float pibPerCapita1;
+
 
     // Variáveis para a Carta 2
     char estado2[20];
@@ -17,6 +20,10 @@ int main() {
     char cidade2[50];
     int populacao2, pontos2;
     float area2, pib2;
+    float densidade2;
+    float pibPerCapita2;
+
+
 
     // --- CADASTRO DA CARTA 1 ---
     // --- CADASTRO DA CARTA 1 ---
@@ -43,6 +50,14 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf(" %d", &pontos1);
 
+    // Cálculo da Carta 1
+// O cast (float) garante que a divisão seja tratada com casas decimais
+    densidade1 = (float) populacao1 / area1; 
+
+// Multiplicamos por 1 bilhão (1e9) para converter de bilhões para reais simples
+    pibPerCapita1 = (pib1 * 1000000000.0) / (float) populacao1;
+
+
     // --- CADASTRO DA CARTA 2 ---
     printf("\n--- Cadastro da Carta 2 ---\n");
     
@@ -67,6 +82,13 @@ int main() {
     printf("Número de Pontos Turísticos: ");
     scanf("%d", &pontos2);
 
+    // Cálculo da Carta 1
+// O cast (float) garante que a divisão seja tratada com casas decimais
+    densidade2 = (float) populacao2 / area2; 
+
+// Multiplicamos por 1 bilhão (1e9) para converter de bilhões para reais simples
+    pibPerCapita2 = (pib2 * 1000000000.0) / (float) populacao2;
+
     // --- EXIBIÇÃO DOS DADOS ---
 printf("\n==================================\n");
 printf("      CARTAS DO SUPER TRUNFO\n");
@@ -80,6 +102,8 @@ printf("População: %d\n", populacao1);
 printf("Área: %.2f km²\n", area1);
 printf("PIB: %.2f bilhões de reais\n", pib1);
 printf("Pontos Turísticos: %d\n", pontos1);
+printf("Densidade Populacional: %.2f hab/km²\n", densidade1);
+printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
 printf("\n----------------------------------\n");
 
@@ -91,13 +115,15 @@ printf("População: %d\n", populacao2);
 printf("Área: %.2f km²\n", area2);
 printf("PIB: %.2f bilhões de reais\n", pib2);
 printf("Pontos Turísticos: %d\n", pontos2);
+printf("Densidade Populacional: %.2f hab/km²\n", densidade2);
+printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
 printf("\n==================================\n");
 printf("Pressione ENTER para encerrar...");
 
 getchar(); // limpa o \n que sobrou
 getchar(); // espera o ENTER real
-//salvar l
+//salvar 
 return 0;
 
 }
