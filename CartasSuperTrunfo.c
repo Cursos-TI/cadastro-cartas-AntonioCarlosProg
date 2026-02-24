@@ -97,7 +97,7 @@ printf("Pressione ENTER para encerrar...");
 
 getchar(); // limpa o \n que sobrou
 getchar(); // espera o ENTER real
-//salvr gighub
+//salvar l
 return 0;
 
 }
