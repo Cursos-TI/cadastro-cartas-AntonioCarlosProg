@@ -132,7 +132,7 @@ int main() {
     getchar(); // Espera o ENTER final
 
 
-    // NIVEL MESTRE OOOOK
+    // NIVEL MESTRE OOOK
 
     return 0;
 }
